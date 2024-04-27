@@ -1,27 +1,48 @@
 body {
-    margin: 0;
-    font-family: 'Calibri', sans-serif;
+    margin: 0 auto;
+    font-family: 'Canva Sans', sans-serif; 
     position: relative;
-}
-
-.top-bar {
-    top: 0;
-    width: 100%;
-    height: 100px;
-    background-color: #ffffff;
-    display: flex;
-    padding: 10px 20px;
-    z-index: 4;
-}
-
-.logo img {
-    max-height: 100%;
-    max-width: 100%;
-}
-
-.page{
     width: 1920px;
     height: 980px;
     background-color: #125252;
+}
 
+
+.nav {
+    width: 100%;
+    height: 100px;  
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+#navlink {
+    width: 100%;
+    height: 100px;  
+    background-color: white;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.pagelink {
+    margin-left: 20px; 
+    padding: 10px 20px;
+    text-decoration: none;  
+    color: black;
+    border: none; 
+    background: none;
+    cursor: pointer;
+    font-family: 'Canva Sans', sans-serif; 
+}
+
+.pagelink-hover {
+    color: gray;
+}
+
+
+#logo {
+    background-color: white;
+    max-height: 100px;  
+    margin-left: 40px; 
 }
