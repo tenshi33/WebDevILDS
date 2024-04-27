@@ -1,59 +1,66 @@
-body {
-    margin: 0 auto;
-    font-family: 'Canva Sans', sans-serif; 
-    position: relative;
-    width: 1920px;
-    height: 980px;
-    background-color: #125252;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
+body {
+    font-family: 'Calibri', sans-serif;
+
+}
+
 .nav {
-    width: 100%;
-    height: 100px;  
     display: flex;
     align-items: center;
     background-color: white;
+    padding: 10px; 
+}
+
+#logo {
+    width: 280px; 
+    height: 100%;
+    margin-right: -50px; 
+    padding-left: 40px;
 }
 
 #navlink {
-    width: 100%;
-    height: 100px;  
-    background-color: white;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
+    margin-left: auto; 
 }
 
 .pagelink {
-    margin-left: 10px; 
+    margin-left: 10px;
     padding: 10px 20px;
-    text-decoration: none;  
+    text-decoration: none;
     color: black;
-    border: none; 
-    background: white;
+    border: none;
+    background: none;
     cursor: pointer;
-    font-family: 'Canva Sans', sans-serif; 
 }
 
-.pagelink-hover {
-    background-color:  gray;
+.pagelink:hover {
+    color: gray;
+}
+.containerHeader1 {
+    background-color: #125252;
+    max-height: 90%;
+    max-height: 900px;
+    display: flex;
+    justify-content: space-between; 
 }
 
-
-#logo {
-    background-color: white;
-    max-width: 10%;
-    max-height: 100px;  
-    margin-left: 50px; 
+.headerlogodiv{
+    padding: 10%;
+}
+.header1 {
+    padding: 10%;   
+    font-size: 20px;
 }
 
-#header1 {
-    max-height: 500px;
-    max-width:  100%;
-    background-color:  gray;
-}
+#headerlogo {
+    width: 300px; 
+    height: auto; 
+    display: block; 
 
-#header1 h1 p{
-    color: white;
 }
