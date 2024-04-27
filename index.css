@@ -47,3 +47,13 @@ body {
     max-height: 100px;  
     margin-left: 50px; 
 }
+
+#header1 {
+    max-height: 500px;
+    max-width:  100%;
+    background-color:  gray;
+}
+
+#header1 h1 p{
+    color: white;
+}
