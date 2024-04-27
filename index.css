@@ -26,23 +26,24 @@ body {
 }
 
 .pagelink {
-    margin-left: 20px; 
+    margin-left: 10px; 
     padding: 10px 20px;
     text-decoration: none;  
     color: black;
     border: none; 
-    background: none;
+    background: white;
     cursor: pointer;
     font-family: 'Canva Sans', sans-serif; 
 }
 
 .pagelink-hover {
-    color: gray;
+    background-color:  gray;
 }
 
 
 #logo {
     background-color: white;
+    max-width: 10%;
     max-height: 100px;  
-    margin-left: 40px; 
+    margin-left: 50px; 
 }
