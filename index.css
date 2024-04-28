@@ -6,6 +6,8 @@
 }
 
 
+
+
 body {
     font-family: 'Calibri', sans-serif;
 
@@ -73,8 +75,8 @@ body {
 
 /* main photo */
 #headerlogo {
-    width: 380px; 
-    height: 300px; 
+    width: 25%; 
+    height: 25%; 
     margin-top: 5%;
     margin-bottom: 5%;
     margin-left: 5%;
@@ -94,10 +96,9 @@ body {
 /* products we offer */
 .products {
     text-align: center;
-    padding-top: 100px;    
-    padding-bottom: 80px;
+    padding-top: 10vh;    
+    padding-bottom: 10vh;
 
-    height: 80%;
 }
 .products:nth-child(odd) {
     background-color: #DBF4DE;
@@ -129,9 +130,9 @@ body {
 .products p {
     font-size: 30px;
     line-height: 40px;
-    margin-top: 30%;
+    margin-top: 12vh;
     text-align: left;
-    width: 400px;
+    width: 20vw;
     word-wrap: break-word; 
 }
 
@@ -146,7 +147,7 @@ body {
     transition: 0.5s;
 }
 .products-col img {
-    width: 400px;
+    width: 20vw;
 }
 .products-col:hover {
     box-shadow: 0 0 10px 0px rgba(0,0,0,5);
@@ -163,7 +164,7 @@ body {
     transition: 0.5s;
 }
 .products-col2 img {
-    width: 500px;
+    width: 25vw;
 }
 .products-col2:hover {
     box-shadow: 0 0 10px 0px rgba(0,0,0,5);
@@ -180,16 +181,37 @@ body {
     transition: 0.5s;
 }
 .products-col3 img {
-    width: 300px;
+    width: 20vw;
 }
 .products-col3:hover {
     box-shadow: 0 0 10px 0px rgba(0,0,0,5);
 }
 
-@media screen and (max-width: 750px) {
-    body{
-        
+@media(max-width: 480px) {
+    .row{
+        flex-direction: column;
     }
+    .containerHeader1{
+        flex-direction: column;
+    }
+    .products h1{
+        font-size: 25px;
+        width: 80vw;
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center;
+    }
+    .products p {
+        font-size: 25px;
+        width: 80vw;
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center;
+    }
+    #headerlogo {
+        width: 80vw; 
+    }
+    
 }
 
 
