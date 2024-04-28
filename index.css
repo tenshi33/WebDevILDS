@@ -212,7 +212,7 @@ body {
 }
 
 /* mobile/tablet view */
-@media(max-width: 1100px) {
+@media(max-width: 760px) {
     .row{
         flex-direction: column;
     }
