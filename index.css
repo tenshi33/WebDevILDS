@@ -226,9 +226,20 @@ body {
     text-align: center;
     padding-top: 5vh;    
     padding-bottom: 5vh;
-    background: linear-gradient(to bottom, #96CB9C 0%, white 95%);
+    background: #96CB9C;
 }
-
+.tools2 h1 {
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 1.5%;
+}
+.tools2 h2 {
+    font-size: 40px;
+    color: black;
+    text-align: center;
+    font-weight: 500;
+}
 
 /* row2 */
 .row2 {
@@ -278,7 +289,7 @@ body {
     text-align: center;
     padding-top: 5vh;    
     padding-bottom: 5vh;
-    background: white;
+    background: linear-gradient(to bottom, #96CB9C 0%, white 95%);
 }
 .aboutUs h1 {
     font-size: 50px;
