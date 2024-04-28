@@ -44,27 +44,25 @@ body {
 .pagelink:hover {
     color: gray;
 }
-.containerHeader1 {
-    background-color: #125252;
-    max-height: 90%;
-    max-height: 900px;
-    display: flex;
-    justify-content: space-between; 
-}
-.containerHeader2 {
-    background-color: #125252;
-    max-height: 90%;
-    max-height: 900px;
-    display: flex;
-    justify-content: space-between; 
-}
 
-/* main */
+.header {
+    background-color: #125252;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.containerHeader1 {
+    text-align: center;
+    padding: 5vh;   
+}
 .header1 {
     padding: 10%;   
     font-size: 20px;
     text-align: center;
 }
+
 .header1 h1 {
     color: #ffffff;
     font-size: 50px;
@@ -90,15 +88,12 @@ body {
 
 /* main photo */
 #headerlogo {
-    width: 25%; 
-    height: 25%; 
+    width: 20vw;
     margin-top: 5%;
     margin-bottom: 5%;
-    margin-left: 5%;
-    margin-right: 5%;  
 }
 
-
+/* fixed sizing for sections */
 .productsMain {
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
@@ -106,14 +101,13 @@ body {
     max-width: 100%;
     align-items: center;
   }
-
-
 /* products we offer */
 .products {
     text-align: center;
     padding-top: 5vh;    
     padding-bottom: 5vh;
 }
+/* alt colors */
 .products:nth-child(odd) {
     background-color: #DBF4DE;
   }
@@ -128,11 +122,6 @@ body {
     font-weight: 600;
     text-align: center;
     padding-top: 1.5%;
-}
-.row {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
 }
 .products h2 {
     font-size: 40px;
@@ -203,8 +192,8 @@ body {
     transition: 0.5s;
 }
 .products-col3 img {
-    padding-top: 6vh;
-    padding-bottom: 6vh;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
     width: 20vw;
 }
 .products-col3:hover {
@@ -212,7 +201,7 @@ body {
 }
 
 /* mobile/tablet view */
-@media(max-width: 760px) {
+@media(max-width: 1100px) {
     .row{
         flex-direction: column;
     }
@@ -234,20 +223,20 @@ body {
     .products-col img {
         padding-top: 6vh;
         padding-bottom: 6vh;
-        width: 30vh;
+        width: 80vw;
     }
     .products-col2 img {
         padding-top: 6vh;
         padding-bottom: 6vh;
-        width: 40vh;
+        width: 80vw;
     }
     .products-col3 img {
-        padding-top: 6vh;
-        padding-bottom: 6vh;
-        width: 30vh;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+        width: 70vw;
     }
     #headerlogo {
-        width: 80vw; 
+        width: 70vw; 
     }
     
 }
