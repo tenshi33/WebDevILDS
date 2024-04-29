@@ -32,10 +32,12 @@ body {
 }
 
 .pagelink {
-    margin-left: 10px;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
     padding: 10px 20px;
     text-decoration: none;
-    color: black;
+    color: #125252;
     border: none;
     background: none;
     cursor: pointer;
