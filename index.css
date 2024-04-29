@@ -21,10 +21,10 @@ body {
 }
 
 #logo {
-    width: 280px; 
+    width: 200px; 
     height: 100%;
     margin-right: -50px; 
-    padding-left: 40px;
+    padding-left: 60px;
 }
 
 #navlink {
@@ -46,7 +46,7 @@ body {
 }
 
 .header {
-    background-color: #125252;
+    background-color: #007c7c;
 }
 .row {
     display: flex;
