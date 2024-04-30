@@ -10,38 +10,100 @@ body {
     font-family: 'Calibri', sans-serif;
 }
 
-.nav {
-    align-items: center;
-    background-color: white;
-    display: flex;
-    padding: 30px; 
-}
-
 #logo {
+    /* main logo image sizing */
     width: 200px; 
     height: 100%;
-    margin-right: -50px; 
     padding-left: 60px;
+    float: left;
 }
 
-#navlink {
-    margin-left: auto; 
+/* nav bar */
+ul {
+    list-style: none;
 }
 
-.pagelink {
-    font-size: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 10px 20px;
+a {
     text-decoration: none;
-    color: #125252;
-    border: none;
-    background: none;
+    color: inherit;
+}
+
+body {
+    /* should have the same height as body, .header__content, and @media .nav */
+    padding-top: 110px;
+}
+
+.header {
+    /* main nav bar design */
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    /* should have the same height as body, .header__content, and @media .nav */
+    min-height: 110px;
+}
+
+.logo {
+    /* DONT CHANGE - this is the logo text pag wala yung image ng ilo */
+    color: black;
+    font-size: 23px;
+    letter-spacing: -1.5px;
+}
+
+.nav {
+    transition: none;
+}
+
+.nav__list {
+    display: flex;
+    /* nav bar text gap */
+    column-gap: 40px;
+}
+
+.nav__item {
+    /* ignore, dont delete */
+}
+
+.nav__link {
+    /* design for the nav bar links */
+    color: black;
+    font-size: 23px;
+    transition: all 0.4s;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+    /* text hover color for nav bar and hamburger menu links */
+    color: #365e69;
+}
+
+.hamburger {
+    display: none;
     cursor: pointer;
 }
-.pagelink:hover {
-    color: gray;
+
+.bar {
+    /* this is the ICON for the hamburger menu */
+    height: 2px;
+    width: 27px;
+    background: #125252;
+    margin: 5px 0;
+    opacity: .8;
 }
+
+.nav--open {
+    /* animation for opening hamburger menu */
+    transform: translate(0) !important;
+}
+
+
 
 .row {
     display: flex;
@@ -334,7 +396,7 @@ body {
 
 
 
-
+/* form at the end of the page */
 .end-form {
     text-align: left;
     padding-top: 3vh;    
@@ -447,6 +509,32 @@ footer {
 
 /* mobile/tablet view */
 @media(max-width: 1100px) {
+
+    .nav {
+        position: fixed;
+        /* should have the same height as body, .header__content, and @media .nav */
+        top: 110px;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 100%;
+        padding: 25px 0 25px;
+        transform: translateX(-100%);
+    }
+    .nav__list {
+        /* gap for the hamburger menu list */
+        flex-direction: column;
+        align-items: center;
+        row-gap: 25px;
+    }
+    .nav__link {
+        /* text design for the hamburger list */
+        font-size: 25px;
+        color: black;
+    }
+    .hamburger {
+        display: block;
+    }
+
     .row{
         flex-direction: column;
     }
