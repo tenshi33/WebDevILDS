@@ -74,7 +74,7 @@ body {
 
 .nav__link {
     /* design for the nav bar links */
-    color: black;
+    color: #125252;
     font-size: 23px;
     transition: all 0.4s;
 }
