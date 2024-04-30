@@ -45,7 +45,7 @@
         <div class="main-front">
             <div class="row">
                 <div class="main-top">
-                    <h1>Better Solution for your Business</h1>
+                    <h1>Better Business</h1>
                     <p>Let our team create your dream website hassle-free</p>
                     <br>
                     <button onclick="contactUs()" class="button">Email Now</button>
