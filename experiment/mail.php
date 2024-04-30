@@ -26,7 +26,7 @@ if (isset($_POST["send"])) {
 
     //Recipients
     $mail->setFrom( $_POST["email"], $_POST["name"]); // Sender Email and name
-    $mail->addAddress('hernandezlnathaniel@gmail.com');     //Add a recipient email  
+    $mail->addAddress('ilodigitalsolution@gmail.com');     //Add a recipient email  
     $mail->addReplyTo($_POST["email"], $_POST["name"]); // reply to sender email
 
     //Content
