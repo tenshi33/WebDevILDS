@@ -1,0 +1,16 @@
+{
+  "name": "webdevilds",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install server/",
+    "start": "node server/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.13"
+  }
+}
