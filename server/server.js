@@ -14,6 +14,9 @@ app.use(express.static(path.join(__dirname, '..', 'client', 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+app.use((req, res, next) => {
+    res.status(404).send("Sorry, the page you're looking for doesn't exist.");
+});
 
 
 app.get('/', (req, res) => {
