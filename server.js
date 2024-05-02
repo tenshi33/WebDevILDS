@@ -23,7 +23,7 @@ app.get('/home', (req, res) => {
 });
 
 // Configure AWS SES
-const ses = new AWS.SES({ region: 'Asia Pacific (Singapore)' }); // Replace 'YOUR_REGION' with your AWS region
+const ses = new AWS.SES({ region: 'ap-southeast-1' }); // Replace 'YOUR_REGION' with your AWS region
 
 app.post('/send-email', (req, res) => {
     const { name, email, subject, message } = req.body;
