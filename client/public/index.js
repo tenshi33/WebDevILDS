@@ -20,8 +20,8 @@ navEl.addEventListener("click", () => {
 
 //button
 function contactUs() {
-  var emailAddress = "recipient@example.com";
-  var subject = "Subject of the email";
+  var emailAddress = "ilodigitalsolution@gmail.com";
+  var subject = "Inquiry";
   var body = "Body of the email";
   var mailtoLink = "mailto:" + encodeURIComponent(emailAddress) + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
   window.location.href = mailtoLink;
