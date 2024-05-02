@@ -22,7 +22,7 @@ navEl.addEventListener("click", () => {
 function contactUs() {
   var emailAddress = "ilodigitalsolution@gmail.com";
   var subject = "Inquiry";
-  var body = "Body of the email";
+  var body = "";
   var mailtoLink = "mailto:" + encodeURIComponent(emailAddress) + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
   window.location.href = mailtoLink;
 }
