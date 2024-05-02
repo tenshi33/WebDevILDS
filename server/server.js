@@ -14,17 +14,14 @@ app.use(express.static(path.join(__dirname, '..', 'client', 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use((req, res, next) => {
-    res.status(404).send("Sorry, the page you're looking for doesn't exist.");
-});
-
-
 app.get('/', (req, res) => {
     res.redirect('/home');
+    res.status(200);
 });
 
 app.get('/home',(req,res)=>{
     res.sendFile(path.join(__dirname, '..', 'client', 'public', 'index.html'));
+    res.status(200);
 });
 
 
