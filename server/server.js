@@ -1,12 +1,16 @@
+// server/server.js
+
 const express = require('express');
-const AWS = require('aws-sdk');
+const nodemailer = require('nodemailer');
 const path = require('path');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000; 
+
 
 app.use(express.static(path.join(__dirname, '..', 'client', 'public')));
 
+// Middleware 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -14,40 +18,44 @@ app.use((req, res, next) => {
     res.status(404).send("Sorry, the page you're looking for doesn't exist.");
 });
 
+
 app.get('/', (req, res) => {
     res.redirect('/home');
 });
 
-app.get('/home', (req, res) => {
+app.get('/home',(req,res)=>{
     res.sendFile(path.join(__dirname, '..', 'client', 'public', 'index.html'));
 });
 
-// Configure AWS SES
-const ses = new AWS.SES({ region: 'ap-southeast-1' }); // Replace 'YOUR_REGION' with your AWS region
 
 app.post('/send-email', (req, res) => {
     const { name, email, subject, message } = req.body;
 
-    const params = {
-        Destination: {
-            ToAddresses: ['angeloegwaras@gmail.com'] // Replace with your recipient email address
-        },
-        Message: {
-            Body: {
-                Text: { Data: `From: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}` }
-            },
-            Subject: { Data: subject }
-        },
-        Source: 'ilodigitalsolution@gmail.com' // Replace with your verified email address in SES
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'hernandezlnathaniel@gmail.com',
+            pass: 'bmjksqyqqbvavylj'
+        }
+    });
+
+    const mailOptions = {
+        from: name,
+        to: 'angeloegwaras@gmail.com',
+        subject: subject,
+        text: message
     };
 
-    ses.sendEmail(params, (error, data) => {
+
+    transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.error(error);
-            res.status(500).send('Failed to send email');
+            console.log(error);
+            alert("error")
+            res.status(500);
         } else {
-            console.log('Email sent:', data);
-            res.status(200).send('Email sent successfully');
+            console.log('Email sent: ' + info.response);
+            alert("Email sent")
+            res.status(200);
         }
     });
 });
@@ -55,3 +63,5 @@ app.post('/send-email', (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
+
+//asdasdsadsad
